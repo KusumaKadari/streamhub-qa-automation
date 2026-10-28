@@ -1,4 +1,4 @@
-# SQL Challenge Verification Results
+﻿# SQL Challenge Verification Results
 
 Engine: Python built-in SQLite 3, execution mode: in-memory.
 

@@ -1,4 +1,4 @@
-# Instructions
+﻿# Instructions
 
 - Following Playwright test failed.
 - Explain why, be concise, respect Playwright best practices.
@@ -41,13 +41,13 @@ Call log:
     - region "Savings summary":
       - article:
         - paragraph: Total Savings
-        - strong: ₹0
+        - strong: â‚¹0
       - article:
         - paragraph: Total Target
-        - strong: ₹0
+        - strong: â‚¹0
       - article:
         - paragraph: Remaining
-        - strong: ₹0
+        - strong: â‚¹0
       - article:
         - paragraph: Overall Progress
         - strong: 0%
@@ -75,31 +75,31 @@ Call log:
   1  | // Exercise-only: intentionally incorrect or brittle locators. Never run with the normal suite.
   2  | const { test, expect } = require('@playwright/test');
   3  | const baseURL = process.env.BASE_URL;
-  4  | 
+  4  |
   5  | test('1 broken text locator: old heading label', async ({ page }) => {
   6  |   await page.goto(baseURL);
   7  |   await expect(page.getByRole('heading', { name: 'Savings Overview Old Label' })).toBeVisible();
   8  | });
-  9  | 
+  9  |
   10 | test('2 brittle nth-child locator: old card position', async ({ page }) => {
   11 |   await page.goto(baseURL);
 > 12 |   await expect(page.locator('.summary-grid > article:nth-child(7)')).toBeVisible();
      |                                                                      ^ Error: expect(locator).toBeVisible() failed
   13 | });
-  14 | 
+  14 |
   15 | test('3 outdated button label', async ({ page }) => {
   16 |   await page.goto(baseURL);
   17 |   await page.getByRole('button', { name: 'Create Savings Item' }).click();
   18 | });
-  19 | 
+  19 |
   20 | test('4 brittle XPath-style selector', async ({ page }) => {
   21 |   await page.goto(baseURL);
   22 |   await expect(page.locator('//*[@data-widget="does-not-exist"]')).toBeVisible();
   23 | });
-  24 | 
+  24 |
   25 | test('5 unstable generated ID', async ({ page }) => {
   26 |   await page.goto(baseURL);
   27 |   await expect(page.locator('#goal-card-dynamic-999')).toBeVisible();
   28 | });
-  29 | 
+  29 |
 ```
