@@ -1,0 +1,21 @@
+{
+  "name": "savesmart-savings-goal-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beginner-friendly savings goal dashboard",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "test": "cucumber-js --config cucumber.js",
+    "test:cucumber": "cucumber-js --config cucumber.js",
+    "test:self-healing": "playwright test --config=playwright.config.js self-healing/exercise",
+    "test:playwright": "playwright test --config=playwright.config.js self-healing/exercise",
+    "test:api": "playwright test --config=playwright.api.config.js",
+    "test:sql": "python sql\\verify_sql.py"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.3.0",
+    "@playwright/test": "^1.64.1",
+    "dotenv": "^18.0.9",
+    "playwright": "^1.64.1"
+  }
+}
